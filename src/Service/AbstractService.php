@@ -112,6 +112,29 @@ abstract class AbstractService
     }
 
     /**
+     * Send a PUT request with JSON-encoded parameters.
+     *
+     * @param $json
+     * @param array $options
+     * @param string $slug
+     *
+     * @return string
+     *
+     * @throws ApiException
+     */
+    protected function put($json, array $options = [], $slug = '')
+    {
+        try {
+            $response = $this->httpClient
+                ->put($this->resource->getResourceName().(!empty($slug) ? '/'.$slug : ''), $json, $options);
+
+            return $response->getBody()->getContents();
+        } catch (RequestException $exception) {
+            throw new ApiException($exception->getMessage(), $exception->getCode(), $exception);
+        }
+    }
+
+    /**
      * Send a DELETE request with JSON-encoded parameters.
      *
      * @param int   $id

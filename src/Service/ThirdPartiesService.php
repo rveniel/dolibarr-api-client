@@ -50,4 +50,18 @@ class ThirdPartiesService extends AbstractService
     {
         return new ResourceId($this->post($this->serialize($thirdparty)));
     }
+
+    /**
+     * @param Thirdparty $thirdparty
+     *
+     * @throws ApiException
+     *
+     * @return Thirdparty
+     */
+    public function update(Thirdparty $thirdparty)
+    {
+        $response = $this->put($this->serialize($thirdparty), [], $thirdparty->getId());
+
+        return $this->deserialize($response, Thirdparty::class);
+    }
 }
