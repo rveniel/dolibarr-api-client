@@ -1,5 +1,5 @@
 {
-    "name": "laudeco/dolibarr-client",
+    "name": "rveniel/dolibarr-client",
     "license": "MIT",
     "description": "PHP client for the rest API of Dolibarr.",
     "type": "library",
@@ -18,6 +18,10 @@
         {
             "name": "De Coninck Laurent",
             "email": "lau.deconinck@gmail.com"
+        },
+        {
+            "name": "Rodolphe Veniel",
+            "email": "rodolphe.veniel@gmail.com"
         }
     ],
     "autoload": {
