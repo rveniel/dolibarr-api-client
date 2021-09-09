@@ -11,7 +11,6 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Thirdparty
 {
-
     /**
      * @var int
      * @JMS\Type("int")
@@ -155,6 +154,72 @@ class Thirdparty
      * @JMS\Type("string")
      */
     private $codeFournisseur;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $url;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof1;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof2;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof3;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof4;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof5;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $idprof6;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $forme_juridique;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $note_public;
+
+    /**
+     * @var string
+     * @JMS\Type("string")
+     */
+    private $country;
+
+    /**
+     * @var array
+     * @JMS\Type("array")
+     */
+    private $array_options;
 
     public function __construct()
     {
@@ -562,5 +627,181 @@ class Thirdparty
         $this->codeFournisseur = $codeFournisseur;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof1()
+    {
+        return $this->idprof1;
+    }
+
+    /**
+     * @param string $idprof1
+     */
+    public function setIdprof1($idprof1)
+    {
+        $this->idprof1 = $idprof1;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof2()
+    {
+        return $this->idprof2;
+    }
+
+    /**
+     * @param string $idprof2
+     */
+    public function setIdprof2($idprof2)
+    {
+        $this->idprof2 = $idprof2;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof3()
+    {
+        return $this->idprof3;
+    }
+
+    /**
+     * @param string $idprof3
+     */
+    public function setIdprof3($idprof3)
+    {
+        $this->idprof3 = $idprof3;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof4()
+    {
+        return $this->idprof4;
+    }
+
+    /**
+     * @param string $idprof4
+     */
+    public function setIdprof4($idprof4)
+    {
+        $this->idprof4 = $idprof4;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof5()
+    {
+        return $this->idprof5;
+    }
+
+    /**
+     * @param string $idprof5
+     */
+    public function setIdprof5($idprof5)
+    {
+        $this->idprof5 = $idprof5;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdprof6()
+    {
+        return $this->idprof6;
+    }
+
+    /**
+     * @param string $idprof6
+     */
+    public function setIdprof6($idprof6)
+    {
+        $this->idprof6 = $idprof6;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFormeJuridique()
+    {
+        return $this->forme_juridique;
+    }
+
+    /**
+     * @param string $forme_juridique
+     */
+    public function setFormeJuridique($forme_juridique)
+    {
+        $this->forme_juridique = $forme_juridique;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNotePublic()
+    {
+        return $this->note_public;
+    }
+
+    /**
+     * @param string $note_public
+     */
+    public function setNotePublic($note_public)
+    {
+        $this->note_public = $note_public;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * @return array
+     */
+    public function getArrayOptions()
+    {
+        return $this->array_options;
+    }
+
+    /**
+     * @param array $array_options
+     */
+    public function setArrayOptions($array_options)
+    {
+        $this->array_options = $array_options;
     }
 }
