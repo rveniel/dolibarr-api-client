@@ -4,6 +4,8 @@
 namespace Dolibarr\Client\Domain\Interventions;
 
 
+use JMS\Serializer\Annotation as JMS;
+
 /**
  * @author Rodolphe Veniel <rodolphe.veniel@gmail.com>
  */
