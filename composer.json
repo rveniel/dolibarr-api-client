@@ -4,7 +4,7 @@
     "description": "PHP client for the rest API of Dolibarr.",
     "type": "library",
     "require": {
-        "php" : ">=5.6",
+        "php" : ">=7.4",
         "guzzlehttp/guzzle": "^6.3",
         "jms/serializer": "dev-master",
         "webmozart/assert": "^1.2",
