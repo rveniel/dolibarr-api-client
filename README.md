@@ -14,6 +14,7 @@ This is a fork of laudeco/dolibarr-client
 
 use Dolibarr\Client\ClientBuilder;
 use Dolibarr\Client\Security\Authentication\TokenAuthentication;
+use Dolibarr\Client\Domain\Thirdparty\ThirdpartyId;
 
 $clientBuilder = new ClientBuilder(
     "https://your-dolibarr.url/api/index.php/", // you must keep the final slash
@@ -22,5 +23,5 @@ $clientBuilder = new ClientBuilder(
 
 $client = $clientBuilder->build();
 
-$thirdParty = $client->thirdparties()->getById(42);
+$thirdParty = $client->thirdparties()->getById(new ThirdpartyId(42));
 ```
