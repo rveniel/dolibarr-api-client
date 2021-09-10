@@ -10,7 +10,7 @@ use Dolibarr\Client\Exception\ApiException;
 use Dolibarr\Client\HttpClient\HttpClientInterface;
 use JMS\Serializer\SerializerInterface;
 
-class Interventions extends AbstractService
+class InterventionsService extends AbstractService
 {
     /**
      * @param HttpClientInterface $httpClient

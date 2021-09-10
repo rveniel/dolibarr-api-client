@@ -4,6 +4,9 @@
 namespace Dolibarr\Client\Domain\Interventions;
 
 
+/**
+ * @author Rodolphe Veniel <rodolphe.veniel@gmail.com>
+ */
 class Intervention
 {
     /**

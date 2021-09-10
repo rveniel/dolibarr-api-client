@@ -6,6 +6,7 @@ use Dolibarr\Client\HttpClient\HttpClient;
 use Dolibarr\Client\HttpClient\HttpClientInterface;
 use Dolibarr\Client\Service\ContactService;
 use Dolibarr\Client\Service\DocumentsService;
+use Dolibarr\Client\Service\InterventionsService;
 use Dolibarr\Client\Service\InvoicesService;
 use Dolibarr\Client\Service\LoginService;
 use Dolibarr\Client\Service\ProductsService;
@@ -64,6 +65,14 @@ final class Client
     public function documents(): DocumentsService
     {
         return new DocumentsService($this->httpClient, $this->serializer);
+    }
+
+    /**
+     * @return InterventionsService
+     */
+    public function interventions(): InterventionsService
+    {
+        return new InterventionsService($this->httpClient, $this->serializer);
     }
 
     /**
