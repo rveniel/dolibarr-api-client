@@ -5,6 +5,8 @@ namespace Dolibarr\Client;
 use Dolibarr\Client\HttpClient\HttpClient;
 use Dolibarr\Client\HttpClient\HttpClientInterface;
 use Dolibarr\Client\Service\ContactService;
+use Dolibarr\Client\Service\DocumentsService;
+use Dolibarr\Client\Service\InvoicesService;
 use Dolibarr\Client\Service\LoginService;
 use Dolibarr\Client\Service\ProductsService;
 use Dolibarr\Client\Service\ProposalService;
@@ -46,6 +48,22 @@ final class Client
     public function thirdparties()
     {
         return new ThirdPartiesService($this->httpClient, $this->serializer);
+    }
+
+    /**
+     * @return InvoicesService
+     */
+    public function invoices(): InvoicesService
+    {
+        return new InvoicesService($this->httpClient, $this->serializer);
+    }
+
+    /**
+     * @return DocumentsService
+     */
+    public function documents(): DocumentsService
+    {
+        return new DocumentsService($this->httpClient, $this->serializer);
     }
 
     /**
