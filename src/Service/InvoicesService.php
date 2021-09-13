@@ -3,6 +3,8 @@
 namespace Dolibarr\Client\Service;
 
 use Dolibarr\Client\Domain\Invoices\Invoice;
+use Dolibarr\Client\Domain\Invoices\Payment;
+use Dolibarr\Client\Domain\Invoices\PaymentRequest;
 use Dolibarr\Client\Domain\Resource\ApiResource;
 use Dolibarr\Client\Exception\ApiException;
 use Dolibarr\Client\HttpClient\HttpClientInterface;
@@ -60,5 +62,34 @@ final class InvoicesService extends AbstractService
         ]);
 
         return $this->deserializeCollection($response, Invoice::class);
+    }
+
+    /**
+     * @param int            $invoiceId
+     * @param PaymentRequest $payment
+     *
+     * @return Payment
+     *
+     * @throws ApiException
+     */
+    public function addPayment(int $invoiceId, PaymentRequest $payment)
+    {
+        $response = parent::post($this->serialize($payment), [], "{$invoiceId}/payments");
+
+        return $this->deserialize($response, Payment::class);
+    }
+
+    /**
+     * @param int $invoiceId
+     *
+     * @return Invoice
+     *
+     * @throws ApiException
+     */
+    public function setToUnpaid(int $invoiceId)
+    {
+        $response = parent::post("", "", "{$invoiceId}/settounpaid");
+
+        return $this->deserialize($response, Invoice::class);
     }
 }
