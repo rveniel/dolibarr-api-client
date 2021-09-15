@@ -68,15 +68,15 @@ final class InvoicesService extends AbstractService
      * @param int            $invoiceId
      * @param PaymentRequest $payment
      *
-     * @return Payment
+     * @return int Created payment ID
      *
      * @throws ApiException
      */
-    public function addPayment(int $invoiceId, PaymentRequest $payment)
+    public function addPayment(int $invoiceId, PaymentRequest $payment): int
     {
         $response = parent::post($this->serialize($payment), [], "{$invoiceId}/payments");
 
-        return $this->deserialize($response, Payment::class);
+        return (int) $response;
     }
 
     /**

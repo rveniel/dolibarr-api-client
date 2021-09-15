@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation as JMS;
 class PaymentRequest
 {
     /**
-     * @JMS\Type("string")
+     * @JMS\Type("int")
      */
     private $datepaye;
 
@@ -58,7 +58,7 @@ class PaymentRequest
     }
 
     /**
-     * @param mixed $datepaye
+     * @param int $datepaye
      * @return PaymentRequest
      */
     public function setDatepaye($datepaye)
